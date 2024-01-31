@@ -1,0 +1,2 @@
+#!/bin/bash
+printf "%d\n" $(( $((S#$(echo $WATER | tr 01234))) + $((S#$(echo $STRI | tr stir. 01234))) )) | tr 01234567 bestschool
