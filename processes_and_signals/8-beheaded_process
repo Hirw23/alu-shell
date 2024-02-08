@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Singal kill
+pkill -f 'highlander' --signal SIKILL
