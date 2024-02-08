@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Bash script in terminal #0 and then moved on terminal #1 to run 5-dont_stop_me_now. We can then see in terminal #0 that my process has been terminated.
 prog_pid=()
-readarray -t prog_id < <(pgrep -la -x "bash.*" | grep '4-to_infinity_and_beyond' | cut -d ' ' -f 1 )
+readarray -t prog_pid < <(pgrep -la -x "bash.*" | grep '4-to_infinity_and_beyond' | cut -d ' ' -f 1 )
 for((i = 0; i < "${#prog_pid[@]}; i++))do
                     kill -s SIGTERM "${prog_pid[i]}"
 done
